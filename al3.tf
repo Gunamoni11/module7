@@ -25,9 +25,6 @@ resource "aws_lb" "test" {
   security_groups    = var.security_groups
   subnets            = var.subnets
 }
-depends_on =[ 
-    aws_launch_template.alt.id
- ]
 
 resource "aws_lb_target_group" "test" {
   name     = var.name_TG
